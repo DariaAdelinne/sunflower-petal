@@ -162,4 +162,4 @@ The SQLite databases are created and used locally. They are intentionally ignore
 ## Author
 
 **Daria Cristea**  
-GitHub: `@DariaAdelinne`
+
