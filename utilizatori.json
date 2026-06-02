@@ -1,0 +1,22 @@
+[
+  {
+    "utilizator": "admin@example.com",
+    "nume": "Demo",
+    "prenume": "Admin",
+    "email": "admin@example.com",
+    "culoare_favorita": "verde",
+    "noutati": true,
+    "parola": "change-me-admin",
+    "rol": "ADMIN"
+  },
+  {
+    "utilizator": "user@example.com",
+    "nume": "Demo",
+    "prenume": "User",
+    "email": "user@example.com",
+    "culoare_favorita": "galben",
+    "noutati": false,
+    "parola": "change-me-user",
+    "rol": "USER"
+  }
+]

@@ -1,0 +1,29 @@
+# Build files
+build/
+
+# macOS files
+.DS_Store
+__MACOSX/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Generated files
+*.uf2
+*.elf
+*.bin
+*.hex
+*.map
+*.dis
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+Makefile
+build.ninja
+.ninja_deps
+.ninja_log

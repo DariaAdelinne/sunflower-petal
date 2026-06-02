@@ -1,0 +1,92 @@
+[
+  {
+    "intrebare": "Care floare este cunoscută drept simbol al iubirii?",
+    "variante": [
+      { "text": "Trandafir", "corect": true },
+      { "text": "Cactus", "corect": false },
+      { "text": "Ferigă", "corect": false },
+      { "text": "Lalea", "corect": false }
+    ]
+  },
+  {
+    "intrebare": "Ce plantă are nevoie de foarte puțină apă?",
+    "variante": [
+      { "text": "Orhidee", "corect": false },
+      { "text": "Cactus", "corect": true },
+      { "text": "Lalea", "corect": false },
+      { "text": "Crin", "corect": false }
+    ]
+  },
+  {
+    "intrebare": "Ce floare se deschide dimineața și urmărește soarele?",
+    "variante": [
+      { "text": "Floarea-soarelui", "corect": true },
+      { "text": "Bujor", "corect": false },
+      { "text": "Margaretă", "corect": false },
+      { "text": "Lavandă", "corect": false }
+    ]
+  },
+  {
+    "intrebare": "Ce culoare au de obicei lavandele?",
+    "variante": [
+      { "text": "Roșu", "corect": false },
+      { "text": "Galben", "corect": false },
+      { "text": "Mov", "corect": true },
+      { "text": "Alb", "corect": false }
+    ]
+  },
+  {
+    "intrebare": "Care plantă este folosită frecvent pentru ceai calmant?",
+    "variante": [
+      { "text": "Mușețel", "corect": true },
+      { "text": "Cactus", "corect": false },
+      { "text": "Palmier", "corect": false },
+      { "text": "Lalea", "corect": false }
+    ]
+  },
+  {
+    "intrebare": "Ce floare este asociată adesea cu primăvara?",
+    "variante": [
+      { "text": "Lalea", "corect": true },
+      { "text": "Brad", "corect": false },
+      { "text": "Cactus", "corect": false },
+      { "text": "Palmier", "corect": false }
+    ]
+  },
+  {
+    "intrebare": "Care dintre acestea este o plantă suculentă?",
+    "variante": [
+      { "text": "Aloe Vera", "corect": true },
+      { "text": "Lavandă", "corect": false },
+      { "text": "Crin", "corect": false },
+      { "text": "Lalea", "corect": false }
+    ]
+  },
+  {
+    "intrebare": "Ce plantă este celebră pentru proprietățile sale medicinale pentru piele?",
+    "variante": [
+      { "text": "Aloe Vera", "corect": true },
+      { "text": "Trandafir", "corect": false },
+      { "text": "Bujor", "corect": false },
+      { "text": "Ferigă", "corect": false }
+    ]
+  },
+  {
+    "intrebare": "Care floare are de obicei spini?",
+    "variante": [
+      { "text": "Trandafir", "corect": true },
+      { "text": "Margaretă", "corect": false },
+      { "text": "Orhidee", "corect": false },
+      { "text": "Lalea", "corect": false }
+    ]
+  },
+  {
+    "intrebare": "Ce plantă este des întâlnită în deșert?",
+    "variante": [
+      { "text": "Cactus", "corect": true },
+      { "text": "Bujor", "corect": false },
+      { "text": "Crin", "corect": false },
+      { "text": "Lavandă", "corect": false }
+    ]
+  }
+]

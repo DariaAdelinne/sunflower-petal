@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz despre flori și plante</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <div class="pagina">
+
+    <div class="bara-sus">
+      <div class="logo">🌻 Sunflower Petal</div>
+
+      <% if (utilizatorAutentificat) { %>
+      <div class="utilizator">
+        <span>Autentificat ca <strong><%= utilizatorAutentificat.prenume %> <%= utilizatorAutentificat.nume %></strong></span>
+
+  <a class="buton" href="/chestionar">Quiz</a>
+
+  <a class="buton" href="/vizualizare-cos">Coș</a>
+          
+  <% if (utilizatorAutentificat.rol === 'ADMIN') { %>
+    <a class="buton" href="/admin">Admin</a>
+  <% } %>
+
+  <form method="POST" action="/delogare" style="margin: 0;">
+    <button type="submit">Delogare</button>
+  </form>
+  </div>
+    <% } else { %>
+      <a class="buton" href="/autentificare">Autentificare</a>
+    <% } %>
+  </div>
+      
+    <main>
+      <%- body %>
+    </main>
+
+    <footer>
+      <p>Sunflower Petal</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

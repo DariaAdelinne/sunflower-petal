@@ -1,0 +1,21 @@
+<section class="quiz-card">
+  <h1>Rezultat Quiz</h1>
+
+  <p style="font-size: 28px;">
+    Ai răspuns corect la
+    <strong><%= raspunsuriCorecte %></strong>
+    din
+    <strong><%= totalIntrebari %></strong>
+    întrebări.
+  </p>
+
+  <% if (raspunsuriCorecte === totalIntrebari) { %>
+    <h2>Perfect!</h2>
+  <% } else if (raspunsuriCorecte >= 7) { %>
+    <h2>Foarte bine!</h2>
+  <% } else if (raspunsuriCorecte >= 4) { %>
+    <h2>Destul de bine.</h2>
+  <% } else { %>
+    <h2>Mai încearcă.</h2>
+  <% } %>
+</section>

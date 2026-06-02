@@ -1,0 +1,303 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #25452b;
+  background:
+    linear-gradient(rgba(245, 255, 240, 0.85), rgba(236, 250, 228, 0.9)),
+    url("/imagini/fundal.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.pagina {
+  min-height: 100vh;
+  padding: 25px;
+}
+
+.bara-sus {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 18px;
+  padding: 15px 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 20px rgba(35, 80, 40, 0.12);
+  backdrop-filter: blur(8px);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+  color: #2e7d32;
+}
+
+.utilizator {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+}
+
+button,
+.buton,
+input[type="submit"] {
+  border: none;
+  border-radius: 14px;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, #43a047, #2e7d32);
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(46, 125, 50, 0.25);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover,
+.buton:hover,
+input[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 18px rgba(46, 125, 50, 0.35);
+}
+
+header {
+  text-align: center;
+  background: white;
+  border-radius: 30px 30px 0 0;
+  padding: 55px 20px 35px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 48px;
+  color: #2e7d32;
+}
+
+header p {
+  font-size: 22px;
+  margin-top: 15px;
+  color: #315c36;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: white;
+  padding: 45px;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 12px 35px rgba(35, 80, 40, 0.15);
+}
+
+.card {
+  background: #f1fbf1;
+  border-radius: 24px;
+  padding: 35px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 36px;
+  color: #25452b;
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+a {
+  color: #2e7d32;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  max-width: 450px;
+  padding: 14px 16px;
+  margin-top: 8px;
+  border: 2px solid #c8e6c9;
+  border-radius: 14px;
+  font-size: 18px;
+  outline: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #43a047;
+  box-shadow: 0 0 0 4px rgba(67, 160, 71, 0.15);
+}
+
+.mesaj-eroare {
+  background: #ffebee;
+  color: #c62828;
+  padding: 14px 18px;
+  border-radius: 14px;
+  font-weight: bold;
+  max-width: 450px;
+}
+
+footer {
+  max-width: 1100px;
+  margin: 25px auto 0;
+  text-align: center;
+  color: #5d6f5f;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+@media (max-width: 700px) {
+  .pagina {
+    padding: 12px;
+  }
+
+  .bara-sus {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 34px;
+  }
+
+  main {
+    padding: 25px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 18px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px 28px;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+th {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+td.pret {
+  white-space: nowrap;
+}
+
+td form {
+  margin: 0;
+}
+
+td button {
+  white-space: nowrap;
+}
+
+.mesaj-succes {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 14px 18px;
+  border-radius: 14px;
+  font-weight: bold;
+  max-width: 600px;
+}
+
+.quiz-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.quiz-card {
+  background: #eef6ec;
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.quiz-card h3 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.varianta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.varianta input[type="radio"] {
+  transform: scale(1.3);
+}
+
+.quiz-submit {
+  width: fit-content;
+  padding: 18px 35px;
+  border: none;
+  border-radius: 18px;
+  background: #379237;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(55,146,55,0.25);
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 500px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group label {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.form-group input {
+  padding: 18px;
+  border-radius: 16px;
+  border: 2px solid #b7d6b4;
+  font-size: 20px;
+}

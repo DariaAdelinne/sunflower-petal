@@ -1,0 +1,17 @@
+<div class="card">
+  <h2>Autentificare</h2>
+
+  <% if (mesajEroare) { %>
+    <p class="mesaj-eroare"><%= mesajEroare %></p>
+  <% } %>
+
+  <form method="POST" action="/verificare-autentificare">
+    <label for="utilizator">Utilizator</label><br>
+    <input type="text" id="utilizator" name="utilizator" placeholder="Introdu utilizatorul" required><br><br>
+
+    <label for="parola">Parolă</label><br>
+    <input type="password" id="parola" name="parola" placeholder="Introdu parola" required><br><br>
+
+    <button type="submit">Autentificare</button>
+  </form>
+</div>

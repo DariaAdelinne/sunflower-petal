@@ -1,0 +1,33 @@
+<div class="page-header">
+  <h2>Coșul meu</h2>
+  <a class="btn secondary" href="/">Înapoi la produse</a>
+</div>
+
+<% if (produseCos.length > 0) { %>
+  <div class="card">
+    <table>
+      <tr>
+        <th>Produs</th>
+        <th>Preț</th>
+        <th>Cantitate în coș</th>
+        <th>Subtotal</th>
+      </tr>
+
+      <% produseCos.forEach((produs) => { %>
+        <tr>
+          <td><%= produs.nume %></td>
+          <td class="pret"><%= produs.pret %> lei</td>
+          <td><%= produs.cantitateCos %></td>
+          <td class="pret"><%= produs.subtotal.toFixed(2) %> lei</td>
+        </tr>
+      <% }) %>
+    </table>
+
+    <h3 class="total">Total: <%= total.toFixed(2) %> lei</h3>
+  </div>
+<% } else { %>
+  <div class="card empty-cart">
+    <p>Coșul este gol.</p>
+    <a class="btn" href="/">Vezi produsele</a>
+  </div>
+<% } %>

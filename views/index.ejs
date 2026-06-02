@@ -1,0 +1,102 @@
+<div class="page-header">
+  <div>
+    <h2>Pagina principală</h2>
+
+    <% if (utilizatorAutentificat) { %>
+      <p>Bine ai venit, <strong><%= utilizatorAutentificat.prenume %></strong>!</p>
+    <% } else { %>
+      <p>Bine ai venit!</p>
+    <% } %>
+  </div>
+</div>
+
+<% if (utilizatorAutentificat && utilizatorAutentificat.rol === 'ADMIN') { %>
+  <div class="admin-buttons">
+    <form action="/creare-bd" method="GET">
+      <button type="submit">Creare BD</button>
+    </form>
+
+    <form action="/inserare-bd" method="GET">
+      <button type="submit">Inserare BD</button>
+    </form>
+  </div>
+<% } %>
+
+<% if (typeof mesaj !== 'undefined' && mesaj) { %> 
+  <p class="mesaj-succes"><%= mesaj %></p>
+<% } %>
+
+<p id="mesaj-cos"></p>
+
+<h2>Produse</h2>
+
+<% if (produse && produse.length > 0) { %>
+  <div class="card">
+    <table>
+      <tr>
+        <th>Nume</th>
+        <th>Preț</th>
+       <% if (utilizatorAutentificat) { %>
+          <th>Acțiune</th>
+        <% } %>
+      </tr>
+
+      <% produse.forEach((produs) => { %>
+        <tr>
+          <td><%= produs.nume %></td>
+          <td class="pret"><%= produs.pret %> lei</td>
+          <% if (utilizatorAutentificat) { %>
+            <td>
+              <form class="formular-cos">
+                <input type="hidden" name="id" value="<%= produs.id %>">
+                <button type="submit">Adaugă în coș</button>
+              </form>
+            </td>
+          <% } %>
+        </tr>
+      <% }) %>
+    </table>
+  </div>
+<% } else { %>
+  <div class="card">
+    <p>Nu există produse în baza de date.</p>
+    <p>Apasă mai întâi pe <strong>Creare BD</strong>, apoi pe <strong>Inserare BD</strong>.</p>
+  </div>
+<% } %>
+
+<script>
+  const formulareCos = document.querySelectorAll('.formular-cos');
+  const mesajCos = document.getElementById('mesaj-cos');
+
+  formulareCos.forEach((formular) => {
+    formular.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const inputId = formular.querySelector('input[name="id"]');
+      const idProdus = inputId.value;
+
+      try {
+        const raspuns = await fetch('/adaugare_cos', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+          },
+          body: `id=${encodeURIComponent(idProdus)}`
+        });
+
+        const rezultat = await raspuns.json();
+
+        if (rezultat.succes) {
+          mesajCos.textContent = rezultat.mesaj + ' Total produse în coș: ' + rezultat.numarProduseCos;
+          mesajCos.className = 'mesaj-succes';
+        } else {
+          mesajCos.textContent = rezultat.mesaj;
+          mesajCos.className = 'mesaj-eroare';
+        }
+      } catch (err) {
+        mesajCos.textContent = 'A apărut o eroare la adăugarea în coș.';
+        mesajCos.className = 'mesaj-eroare';
+      }
+    });
+  });
+</script>

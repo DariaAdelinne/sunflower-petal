@@ -1,0 +1,30 @@
+<header>
+  <h1>Quiz despre flori și plante</h1>
+  <p>Testează-ți cunoștințele despre natură</p>
+</header>
+
+<form action="/rezultat-chestionar" method="POST" class="quiz-form">
+
+  <% intrebari.forEach((intrebare, index) => { %>
+    <div class="quiz-card">
+      <h3><%= index + 1 %>. <%= intrebare.intrebare %></h3>
+
+      <% intrebare.variante.forEach((varianta, variantaIndex) => { %>
+        <label class="varianta">
+          <input
+            type="radio"
+            name="intrebare_<%= index %>"
+            value="<%= variantaIndex %>"
+            required
+          >
+
+          <span><%= varianta.text %></span>
+        </label>
+      <% }) %>
+    </div>
+  <% }) %>
+
+  <button type="submit" class="quiz-submit">
+    Vezi rezultatul
+  </button>
+</form>
